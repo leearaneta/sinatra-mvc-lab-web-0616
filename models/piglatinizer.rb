@@ -1,7 +1,7 @@
 class PigLatinizer
   def piglatinize(string)
     letters = ""
-    letters += string.slice!(0) until string.slice(0).scan(/[^aeiou]/i).count == 0
+    letters += string.slice!(0) until string.slice(0).scan(/[^aeiou]/i).empty?
     letters.empty? ? new_string = string + "way" : new_string = string + letters + "ay"
   end
 
